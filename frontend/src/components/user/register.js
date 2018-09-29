@@ -171,36 +171,21 @@ export default class Registration extends Component {
                                 </div>
                                 <div className="col-md-12">
                                     <div className="form-wrap">
-                                        <label>City</label>
-                                        <Autocomplete
-                                            className="form-control"
-                                            onPlaceSelected={(place) => {
-                                                this.setState({'address': place.formatted_address});  
-                                            }}
-                                            types={['(regions)']}
-                                            componentRestrictions={{country: "in"}}
-                                        />
+                                        <label>Driving Area</label>
+                                        <Validation.components.Input onChange={this.logChange} className="form-control" value='' placeholder='Yorkdale' name='name' validations={['required']}/>
                                     </div>
                                 </div>
                                 <div className="col-md-12">
                                     <div className="form-wrap">
-                                        <label>Blood Group</label>
-                                        <Select
-                                          name='bloodgroup'
-                                          options={options}
-                                          value={this.state.bloodGroup}
-                                          onChange={this.logChange}
-                                          searchable={searchable}
-                                          clearable={searchable}
-                                        //   onChange={this.logChange}
-                                        />
+                                        <label>Insurance Provider</label>
+                                        <Validation.components.Input onChange={this.logChange} className="form-control" value='' placeholder='Fidelity' name='name' validations={['required']}/>
                                     </div>
                                 </div>
                                 <div className="col-md-12">
                                     <div className="form-wrap">
                                         <label>Date of birth</label>
                                         <DateTimeField onChange={this.dateFormat} />
-                                        <span style={{"display": "none"}} ref="dateError" className='form-error is-visible'>You should be above 16 to donate blood.</span>
+                                        <span style={{"display": "none"}} ref="dateError" className='form-error is-visible'>You should be above 16 to drive.</span>
                                     </div>
                                 </div>
                                 <div className="col-md-12">
@@ -231,38 +216,14 @@ export default class Registration extends Component {
                 </div>
                 <div className="col-md-4">
                     <div className="panel panel-default p25 uth-panel">
-                        <div className="uth-panel-head">Current Requirements</div>
+                        <div className="uth-panel-head">Current Drivers</div>
                         <div className="panel-body uth-panel-body">
                             <ul className="list-unstyled blood-requirements">
                                 <li className="requiree">
-                                    <div style={{"fontWeight": "bold"}}>Mr. Ram, </div>
-                                    <span className="highlightme meta-details"><Ionicon fontSize="18px" icon="ion-waterdrop" color="#ff8484" /> O+ - 1 unit</span>
-                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-android-call" color="#4e585e" />9884237738.</div>
-                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-location" color="#4e585e" />Appolo Hospital, Greams Road.</div>
-                                </li>
-                                <li className="requiree">
-                                    <div style={{"fontWeight": "bold"}}>Mr. Ram, </div>
-                                    <span className="highlightme meta-details"><Ionicon fontSize="18px" icon="ion-waterdrop" color="#ff8484" /> O+ - 1 unit</span>
-                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-android-call" color="#4e585e" />9884237738.</div>
-                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-location" color="#4e585e" />Appolo Hospital, Greams Road.</div>
-                                </li>
-                                <li className="requiree">
-                                    <div style={{"fontWeight": "bold"}}>Mr. Ram, </div>
-                                    <span className="highlightme meta-details"><Ionicon fontSize="18px" icon="ion-waterdrop" color="#ff8484" /> O+ - 1 unit</span>
-                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-android-call" color="#4e585e" />9884237738.</div>
-                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-location" color="#4e585e" />Appolo Hospital, Greams Road.</div>
-                                </li>
-                                <li className="requiree">
-                                    <div style={{"fontWeight": "bold"}}>Mr. Ram, </div>
-                                    <span className="highlightme meta-details"><Ionicon fontSize="18px" icon="ion-waterdrop" color="#ff8484" /> O+ - 1 unit</span>
-                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-android-call" color="#4e585e" />9884237738.</div>
-                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-location" color="#4e585e" />Appolo Hospital, Greams Road.</div>
-                                </li>
-                                <li className="requiree">
-                                    <div style={{"fontWeight": "bold"}}>Mr. Ram, </div>
-                                    <span className="highlightme meta-details"><Ionicon fontSize="18px" icon="ion-waterdrop" color="#ff8484" /> O+ - 1 unit</span>
-                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-android-call" color="#4e585e" />9884237738.</div>
-                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-location" color="#4e585e" />Appolo Hospital, Greams Road.</div>
+                                    <div style={{"fontWeight": "bold"}}>D Din, </div>
+                                    <span className="highlightme meta-details"><Ionicon fontSize="18px" icon="" color="#ff8484" /> </span>
+                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-android-call" color="#4e585e" />4167999999</div>
+                                    <div className="meta-details"><Ionicon fontSize="18px" icon="ion-location" color="#4e585e" />Eaton Centre</div>
                                 </li>
                             </ul>
                         </div>
